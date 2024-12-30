@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Redirect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20%;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Web!</h1>
+    <button id="randomButton">Interface</button>
+
+    <script>
+        // Danh sách các URL
+        const urls = [
+            "https://nupet.vn/anh-meo-cute/",
+            "https://hoanghamobile.com/tin-tuc/anh-con-cho/",
+            "https://hoanghamobile.com/tin-tuc/anh-hoang-hon-dep/"
+        ];
+
+        // Xử lý sự kiện khi nút được nhấn
+        document.getElementById("randomButton").addEventListener("click", function() {
+            const randomIndex = Math.floor(Math.random() * urls.length); // Lấy ngẫu nhiên một chỉ số
+            const randomUrl = urls[randomIndex]; // Lấy URL tương ứng
+            window.location.href = randomUrl; // Chuyển hướng đến URL đó
+        });
+    </script>
+</body>
+</html>
